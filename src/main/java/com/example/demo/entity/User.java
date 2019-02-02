@@ -20,6 +20,16 @@ public class User {
 	@ManyToMany
 	private List<Role> perfis;
 
+	public User() {
+		super();
+	}
+
+	public User(String name, String email) {
+		super();
+		this.name = name;
+		this.email = email;
+	}
+
 	public Long getId() {
 		return id;
 	}
@@ -51,5 +61,10 @@ public class User {
 
 	public void setPerfis(List<Role> perfis) {
 		this.perfis = perfis;
+	}
+
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", name=" + name + ", email=" + email + "]";
 	}
 }
